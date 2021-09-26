@@ -1,6 +1,7 @@
 package com.example.springdata_boot_jwt_hnqb.Entity;
 
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,9 +13,9 @@ import java.util.Set;
 @Table(name = "t_user")
 @Getter
 @Setter
+@Data
 public class User extends BaseEntity {
     private String username;
-
     private String password;
 
     @OneToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
